@@ -1,3 +1,3 @@
 # *hypr-waybar*
 
-[screenshot](waybar.png)
+![screenshot](waybar.png)
