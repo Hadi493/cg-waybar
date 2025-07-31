@@ -4,7 +4,7 @@
     "height": 30,
     "spacing": 1,
     "margin": 0,
-    "modules-left": ["hyprland/workspaces", "hyprland/window", "custom/weather", "custom/quote"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window", "custom/quote"],
     "modules-center": [],
     "modules-right": ["clock", "pulseaudio", "pulseaudio#microphone", "backlight", "network", "cpu", "memory", "temperature", "battery", "disk", "custom/uptime", "custom/updates", "tray"],
 
@@ -34,7 +34,9 @@
     },
 
     "hyprland/window": {
-        "format": "{}"
+        "format": "{}",
+        "max-length": 50,
+        "tooltip": true
     },
 
     "custom/playerctl": {

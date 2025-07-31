@@ -144,7 +144,7 @@ window#waybar {
 #mode, #mpd, #custom-weather, #custom-playerctl, #clock, #cpu,
 #memory, #temperature, #battery, #network, #pulseaudio,
 #backlight, #disk, #custom-uptime, #custom-updates, #custom-quote,
-#idle_inhibitor, #tray {
+#idle_inhibitor, #tray, #window {
     padding: 0 10px;
     margin: 0 2px;
     border-bottom: 2px solid transparent;
@@ -152,27 +152,54 @@ window#waybar {
 }
 
 /* Workspaces styling */
+#workspaces {
+    margin: 0 5px;
+}
+
 #workspaces button {
-    padding: 0 10px;
+    padding: 0 12px;
     background-color: transparent;
     color: @workspaces-color;
-    margin: 0;
+    margin: 0 1px;
+    border-radius: 0;
+    transition: all 0.2s ease-in-out;
+    border-bottom: 2px solid transparent;
 }
 
 #workspaces button:hover {
     background: @background-light;
+    color: @workspaces-focused-fg;
     box-shadow: inherit;
+    border-bottom: 2px solid @workspaces-focused-fg;
 }
 
 #workspaces button.focused {
-    box-shadow: inset 0 -2px @workspaces-focused-fg;
+    background-color: rgba(166, 227, 161, 0.1);
+    border-bottom: 3px solid @workspaces-focused-fg;
     color: @workspaces-focused-fg;
-    font-weight: 800;
+    font-weight: bold;
+    box-shadow: inset 0 -1px 0 @workspaces-focused-fg;
+}
+
+#workspaces button.active {
+    background-color: rgba(166, 227, 161, 0.1);
+    border-bottom: 3px solid @workspaces-focused-fg;
+    color: @workspaces-focused-fg;
+    font-weight: bold;
 }
 
 #workspaces button.urgent {
     background-color: @workspaces-urgent-bg;
     color: @workspaces-urgent-fg;
+    border-bottom: 3px solid @workspaces-urgent-fg;
+    animation: urgent-blink 1s infinite;
+}
+
+@keyframes urgent-blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    51% { opacity: 0.7; }
+    100% { opacity: 0.7; }
 }
 
 /* Module-specific styling */
@@ -310,6 +337,17 @@ window#waybar {
 #idle_inhibitor.activated {
     color: @idle-inhibitor-active-color;
     border-bottom-color: @idle-inhibitor-active-color;
+}
+
+#window {
+    color: @foreground;
+    border-bottom-color: @cyan;
+    font-style: italic;
+}
+
+#window.empty {
+    color: rgba(205, 214, 244, 0.6);
+    border-bottom-color: transparent;
 }
 
 #tray {
