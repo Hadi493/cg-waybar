@@ -2,11 +2,13 @@
     "layer": "top",
     "position": "top",
     "height": 30,
+    "output": "eDP-1",
     "spacing": 1,
     "margin": 0,
     "modules-left": ["hyprland/workspaces", "hyprland/window", "custom/quote"],
     "modules-center": [],
     "modules-right": ["clock", "pulseaudio", "pulseaudio#microphone", "backlight", "network", "cpu", "memory", "temperature", "battery", "disk", "custom/uptime", "custom/updates", "tray"],
+
 
     "hyprland/workspaces": {
         "disable-scroll": true,
