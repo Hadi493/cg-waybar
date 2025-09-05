@@ -7,7 +7,7 @@
     "margin": 0,
     "modules-left": ["hyprland/workspaces", "hyprland/window", "custom/quote"],
     "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "pulseaudio#microphone", "battery", "backlight", "cpu", "memory", "temperature", "custom/uptime", "tray", "network"],
+    "modules-right": ["pulseaudio", "pulseaudio#microphone", "battery", "backlight", "cpu", "memory", "temperature", "custom/uptime", "network", "tray"],
 
 
     "hyprland/workspaces": {
