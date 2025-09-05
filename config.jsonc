@@ -4,7 +4,7 @@
     "height": 30,
     "spacing": 1,
     "margin": 0,
-    "modules-left": ["hyprland/workspaces", "hyprland/window", "custom/quote"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window"],
     "modules-center": [],
     "modules-right": ["clock", "pulseaudio", "pulseaudio#microphone", "backlight", "network", "cpu", "memory", "temperature", "battery", "disk", "custom/uptime", "custom/updates", "tray"],
 
