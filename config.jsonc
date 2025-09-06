@@ -36,9 +36,9 @@
     },
 
     "hyprland/window": {
-        "format": "{}",
-        "max-length": 50,
-        "tooltip": true
+        "format": "{class}",
+        "max-length": 20,
+        "tooltip-format": "{title}"
     },
 
     "custom/playerctl": {
