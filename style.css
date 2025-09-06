@@ -85,13 +85,14 @@ window#waybar {
 #workspaces {
     margin: 0;
     padding: 0;
-    background: transparent;
+    border-radius: 10px;
+    background-color: #1E1E2E;
 }
 
 #workspaces button {
     padding: 5px 12px;
     background-color: transparent;
-    color: @workspaces-color;
+    color: #89B4FA;
     margin: 0 2px;
     border-radius: 10px;
     transition: all 0.3s ease-in-out;
@@ -106,7 +107,7 @@ window#waybar {
 
 #workspaces button.focused,
 #workspaces button.active {
-    background-color: @workspaces-focused-bg;
+    background-color: #89B4FA;
     color: @black;
     border: 2px solid @workspaces-focused-bg;
     font-weight: bold;
