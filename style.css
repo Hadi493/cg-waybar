@@ -62,21 +62,21 @@ window#waybar {
 /* Floating sections styling */
 .modules-left {
     background-color: transparent;
-    border-radius: 15px;
+    border-radius: 0px;
     padding: 5px 15px;
     margin-right: 10px;
 }
 
 .modules-center {
     background-color: transparent;
-    border-radius: 15px;
+    border-radius: 0px;
     padding: 5px 20px;
     margin: 0 10px;
 }
 
 .modules-right {
     background-color: transparent;
-    border-radius: 15px;
+    border-radius: 0px;
     padding: 5px 15px;
     margin-left: 10px;
 }
@@ -85,16 +85,16 @@ window#waybar {
 #workspaces {
     margin: 0;
     padding: 0;
-    border-radius: 10px;
+    border-radius: 0px;
     background-color: #1E1E2E;
 }
 
 #workspaces button {
-    padding: 5px 12px;
+    padding: 5px 10px;
     background-color: transparent;
     color: #89B4FA;
     margin: 0 2px;
-    border-radius: 10px;
+    border-radius: 0px;
     transition: all 0.3s ease-in-out;
     border: 2px solid transparent;
 }
@@ -135,7 +135,7 @@ window#waybar {
     margin: 0 2px;
     background-color: @background;
     border: 1px solid @background-light;
-    border-radius: 8px;
+    border-radius: 0px;
     transition: all 0.3s ease;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
@@ -180,7 +180,7 @@ window#waybar {
 #window {
     color: @foreground;
     font-style: italic;
-    border-radius: 8px;
+    border-radius: 0px;
 }
 
 #window.empty {
@@ -190,7 +190,7 @@ window#waybar {
 #tray {
     background-color: @background;
     border: 1px solid @background-light;
-    border-radius: 8px;
+    border-radius: 0px;
     padding: 0 10px;
     margin: 0 2px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
@@ -203,7 +203,7 @@ window#waybar {
 #tray > .needs-attention {
     -gtk-icon-effect: highlight;
     background-color: rgba(243, 139, 168, 0.3);
-    border-radius: 6px;
+    border-radius: 0px;
 }
 
 /* Language switcher styling */
