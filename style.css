@@ -96,20 +96,18 @@ window#waybar {
     margin: 0 2px;
     border-radius: 0px;
     transition: all 0.3s ease-in-out;
-    border: 2px solid transparent;
 }
-
-#workspaces button:hover {
-    background: @background-light;
-    color: @workspaces-focused-fg;
-    border: 2px solid @workspaces-focused-fg;
-}
+/**/
+/* #workspaces button:hover { */
+/*     background: @background-light; */
+/*     color: @workspaces-focused-fg; */
+/*     border: 2px solid @workspaces-focused-fg; */
+/* } */
 
 #workspaces button.focused,
 #workspaces button.active {
     background-color: #89B4FA;
     color: @black;
-    border: 2px solid @workspaces-focused-bg;
     font-weight: bold;
 }
 
