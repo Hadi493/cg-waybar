@@ -5,7 +5,7 @@
     "output": "eDP-1",
     "spacing": 1,
     "margin": 0,
-    "modules-left": ["hyprland/workspaces", "hyprland/window", "custom/weather", "custom/playerctl", "tray"],
+    "modules-left": ["hyprland/workspaces", "hyprland/window",  "tray"],
     "modules-center": ["clock"],
     "modules-right": ["pulseaudio", "pulseaudio#microphone", "battery", "backlight", "cpu", "memory", "temperature", "custom/uptime", "network"],
 
