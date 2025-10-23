@@ -53,10 +53,6 @@ window#waybar {
     margin-left: 10px;
 }
 
-
-
-
-
 @keyframes urgent-blink {
     0% { opacity: 1; }
     50% { opacity: 0.7; }
@@ -85,12 +81,10 @@ window#waybar {
     border-color: @blue;
 }
 
-
-
 #workspaces button.focused,
 #workspaces button.active {
     background-color: @background;
-    color: @cyan;
+    color: @color4;
 }
 
 #window {
