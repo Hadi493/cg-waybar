@@ -15,13 +15,10 @@
 @define-color white #bac2de;
 @define-color orange #fab387;
 
-
-
-
 * {
     border: none;
     border-radius: 0;
-    font-family: "Iosevka Nerd Font";
+    font-family: "Iosevka";
     font-size: 16px;
     min-height: 0;
 }
@@ -83,7 +80,7 @@ window#waybar {
 #memory:hover, #temperature:hover, #battery:hover, #network:hover, #pulseaudio:hover,
 #backlight:hover, #disk:hover, #custom-uptime:hover, #custom-updates:hover, #custom-quote:hover,
 #custom-language:hover, #idle_inhibitor:hover {
-    background-color: @background-light;
+    background-color: @background;
     border-color: @blue;
 }
 
