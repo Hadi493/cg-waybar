@@ -84,7 +84,7 @@ window#waybar {
 #workspaces button.focused,
 #workspaces button.active {
     background-color: @background;
-    color: @color4;
+    color: @color3;
 }
 
 #window {

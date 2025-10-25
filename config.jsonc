@@ -7,10 +7,10 @@
   "margin": 0,
   "modules-left": [
     "hyprland/workspaces",
-    "hyprland/window",
-    "tray"
+    "hyprland/window"
   ],
   "modules-center": [
+	"tray",
     "clock"
   ],
   "modules-right": [
@@ -21,8 +21,8 @@
     "cpu",
     "memory",
     "temperature",
-    "custom/uptime",
-    "network"
+    "custom/uptime"
+    // "network"
   ],
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -50,8 +50,8 @@
   },
   "hyprland/window": {
     "format": "{title}",
-    "max-length": 50,
-    "tooltip-format": "{class} - {title}"
+    "max-length": 65
+    // "tooltip-format": "{class}"
   },
   "custom/playerctl": {
     "format": " 󰐊 {}",
