@@ -10,18 +10,18 @@
     "hyprland/window"
   ],
   "modules-center": [
-	"tray",
-    "clock"
+    "tray",
+    "clock",
+    "custom/uptime"
   ],
   "modules-right": [
-    "pulseaudio",
     "pulseaudio#microphone",
+    "pulseaudio",
     "battery",
     "backlight",
     "cpu",
     "memory",
-    "temperature",
-    "custom/uptime"
+    "temperature"
     // "network"
   ],
   "hyprland/workspaces": {
@@ -49,8 +49,8 @@
     }
   },
   "hyprland/window": {
-    "format": "{title}",
-    "max-length": 65
+    "format": "{class}",
+    "max-length": 10
     // "tooltip-format": "{class}"
   },
   "custom/playerctl": {
