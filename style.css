@@ -133,32 +133,65 @@ window#waybar {
 
 /* Static Rounded */
 
-#custom-uptime {
-		border-radius: 0px 20px 20px 0px;
-}
-
-#tray {
-		border-radius: 20px 0px 0px 20px;
-}
-
-#temperature {
-		border-radius: 0px 20px 20px 0px;
-}
-
-#pulseaudio.microphone {
-		border-radius: 20px 0px 0px 20px;
-}
-
-#workspaces {
-		border-radius: 20px 0px 0px 20px;
-}
-
-#window {
-		border-radius: 0px 20px 20px 0px;
-}
+/* #custom-uptime { */
+/* 		border-radius: 0px 20px 20px 0px; */
+/* } */
+/**/
+/* #tray { */
+/* 		border-radius: 20px 0px 0px 20px; */
+/* } */
+/**/
+/* #temperature { */
+/* 		border-radius: 0px 20px 20px 0px; */
+/* } */
+/**/
+/* #pulseaudio.microphone { */
+/* 		border-radius: 20px 0px 0px 20px; */
+/* } */
+/**/
+/* #workspaces { */
+/* 		border-radius: 20px 0px 0px 20px; */
+/* } */
+/**/
+/* #window { */
+/* 		border-radius: 0px 20px 20px 0px; */
+/* } */
 
 /* only if not have in 'uwsm-manager' */
 
 /* #clock { */
 /* 		border-radius: 20px 0px 0px 20px; */
+/* } */
+
+
+/* Half rounded style */
+
+#custom-uptime {
+		border-radius: 0px 0px 20px 0px;
+}
+
+#tray {
+		border-radius: 0px 0px 0px 20px;
+}
+
+#temperature {
+		border-radius: 0px 0px 20px 0px;
+}
+
+#pulseaudio.microphone {
+		border-radius: 0px 0px 0px 20px;
+}
+
+#workspaces {
+		border-radius: 0px 0px 0px 20px;
+}
+
+#window {
+		border-radius: 0px 0px 20px 0px;
+}
+
+/* only if not have in 'uwsm-manager' */
+
+/* #clock { */
+/* 		border-radius: 0px 0px 0px 20px; */
 /* } */
