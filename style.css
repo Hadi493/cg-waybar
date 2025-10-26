@@ -83,7 +83,7 @@ window#waybar {
 
 #workspaces button.focused,
 #workspaces button.active {
-    background-color: @background;
+    /* background-color: @background; */
     color: @color3;
 }
 
@@ -156,8 +156,6 @@ window#waybar {
 #window {
 		border-radius: 0px 20px 20px 0px;
 }
-
-
 
 /* only if not have in 'uwsm-manager' */
 
