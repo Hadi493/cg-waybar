@@ -167,7 +167,7 @@ window#waybar {
 /* Half rounded style */
 
 #custom-uptime {
-		border-radius: 0px 0px 20px 0px;
+		border-radius: 0px 0px 15px 0px;
 }
 
 #tray {
@@ -175,19 +175,19 @@ window#waybar {
 }
 
 #temperature {
-		border-radius: 0px 0px 20px 0px;
+		border-radius: 0px 0px 15px 0px;
 }
 
 #pulseaudio.microphone {
-		border-radius: 0px 0px 0px 20px;
+		border-radius: 0px 0px 0px 15px;
 }
 
 #workspaces {
-		border-radius: 0px 0px 0px 20px;
+		border-radius: 0px 0px 0px 15px;
 }
 
 #window {
-		border-radius: 0px 0px 20px 0px;
+		border-radius: 0px 0px 15px 0px;
 }
 
 /* only if not have in 'uwsm-manager' */
