@@ -3,6 +3,7 @@
 A clean waybar configuration for Hyprland.
 
 ![screenshot](./cg-waybar.png)
+![screenshot](./static_rounded_style.png)
 
 ## Features
 
