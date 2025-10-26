@@ -1,8 +1,7 @@
-# Waybar Configuration
+# Waybar Configuration V2.0.0
 
 A clean waybar configuration for Hyprland.
 
-![screenshot](./cg-waybar.png)
 ![screenshot](./2025-10-26_18-35-29.png)
 
 ## Features
@@ -50,13 +49,15 @@ This configuration relies on several external tools and packages to function cor
 1.  **Install Dependencies:**
     Install all the packages listed in the **Dependencies** section using your package manager. For Arch Linux:
     ```bash
-    sudo pacman -S waybar hyprland kitty playerctl pavucontrol pipewire-pulse brightnessctl htop s-tui network-manager-applet
+    sudo pacman -S waybar hyprland kitty playerctl pavucontrol pipewire-pulse brightnessctl btop s-tui network-manager-applet
     ```
     *(Note: You may need to install a Nerd Font like `ttf-iosevka-nerd` from the AUR or manually)*
 
 2.  **Clone the Repository:**
     ```bash
     git clone https://github.com/Hadi493/cg-waybar.git ~/.config/waybar
+    cd ~/.config/waybar/
+    git switch v2.0.0
     ```
     *(If you already have a `~/.config/waybar` directory, back it up first or clone into a different directory and copy the files over.)*
 
