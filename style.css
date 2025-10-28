@@ -179,7 +179,7 @@ window#waybar {
 }
 
 #pulseaudio.microphone {
-		border-radius: 0px 0px 0px 15px;
+		border-radius: 15px 0px 0px 0px;
 }
 
 #workspaces {
@@ -187,7 +187,7 @@ window#waybar {
 }
 
 #window {
-		border-radius: 0px 0px 15px 0px;
+		border-radius: 0px 15px 0px 0px;
 }
 
 /* only if not have in 'uwsm-manager' */
