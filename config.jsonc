@@ -11,9 +11,9 @@
   ],
   "modules-center": [
     "tray",
-    "custom/notification",
     "clock",
-    "custom/uptime"
+    "custom/uptime",
+    "custom/notification"
   ],
   "modules-right": [
     "pulseaudio#microphone",
@@ -241,22 +241,20 @@
     "icon-size": 20,
     "spacing": 5
   },
-  "custom/notification": {
-    "tooltip": false,
-    "format": "{icon}",
-    "format-icons": {
-      "notification": "<span foreground-color='#BF616A'> 󰂚 </span>",
-      "none": "<span foreground-color='#A3BE8C'> 󰂛 </span>",
-      "dnd-notification": "<span foreground-color='#BF616A'> 󰂛 </span>",
-      "dnd-none": "<span foreground-color='#A3BE8C'> 󰂛 </span>",
-      "inhibited-notification": "<span foreground-color='#BF616A'> 󰂛 </span>",
-      "inhibited-none": "<span foreground-color='#A3BE8C'> 󰂛 </span>"
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "swaync-client -t -sw",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  }
-}
+      "custom/notification": {
+          "tooltip": false,
+          "format": "{icon}",
+          "format-icons": {
+                          "notification": "󰂞",
+                          "none": "󰂜",
+                          "dnd-notification": "󰂛",
+                          "dnd-none": "󰂜",
+                          "inhibited-notification": "󰂜",
+                          "inhibited-none": "󰂜"          },
+          "return-type": "json",
+          "exec-if": "which swaync-client",
+          "exec": "swaync-client -swb",
+          "on-click": "swaync-client -t -sw",
+          "on-click-right": "swaync-client -d -sw",
+          "escape": true
+      }}
