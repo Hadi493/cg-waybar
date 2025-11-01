@@ -6,8 +6,9 @@
   "spacing": 1,
   "margin": 0,
   "modules-left": [
-    "hyprland/workspaces",
-    "hyprland/window"
+    "sway/workspaces",
+    "temperature"
+
   ],
   "modules-center": [
     "network",
@@ -21,38 +22,17 @@
     "battery",
     "backlight",
     "cpu",
-    "memory",
-    "temperature"
+    "memory"
     // "network"
   ],
-  "hyprland/workspaces": {
+  "sway/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
-    "format": "{name}",
-    "format-icons": {
-      "1": "󰖟",
-      "2": "",
-      "3": "",
-      "4": "󰭹",
-      "5": "󰕧",
-      "6": "",
-      "7": "",
-      "8": "󰣇",
-      "9": "",
-      "10": ""
-    },
-    "persistent_workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": []
-    }
+    "format": "{name}"
   },
-  "hyprland/window": {
-    "format": "{class}",
-    "max-length": 80
-    // "tooltip-format": "{class}"
+  "sway/window": {
+    "format": "{name}",
+    "tooltip-format": "{class}"
   },
   "custom/playerctl": {
     "format": " 󰐊 {}",
