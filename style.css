@@ -35,22 +35,22 @@ window#waybar {
 .modules-left {
     background-color: transparent;
     border-radius: 0px;
-    padding: 5px 15px;
-    margin-right: 10px;
+    padding: 0px 0px;
+    margin-right: 0px;
 }
 
 .modules-center {
     background-color: transparent;
     border-radius: 0px;
-    padding: 5px 20px;
-    margin: 0 10px;
+    padding: 0px 0px;
+    margin: 0px;
 }
 
 .modules-right {
     background-color: transparent;
     border-radius: 0px;
-    padding: 5px 15px;
-    margin-left: 10px;
+    padding: 0px 0px;
+    margin-left: 0px;
 }
 
 @keyframes urgent-blink {
@@ -135,33 +135,33 @@ window#waybar {
 
 /* Static Rounded */
 
-#custom-notification {
-		border-radius: 0px 20px 20px 0px;
-}
-
-#network {
-		border-radius: 20px 0px 0px 20px;
-}
-
-#temperature {
-		border-radius: 0px 20px 20px 0px;
-}
-
-#pulseaudio.microphone {
-		border-radius: 20px 0px 0px 20px;
-}
-
-#memory {
-		border-radius: 0px 20px 20px 0px;
-}
-
-#workspaces {
-		border-radius: 20px 0px 0px 20px;
-}
-
-#window {
-		border-radius: 0px 20px 20px 0px;
-}
+/* #custom-notification { */
+/* 		border-radius: 0px 20px 20px 0px; */
+/* } */
+/**/
+/* #network { */
+/* 		border-radius: 20px 0px 0px 20px; */
+/* } */
+/**/
+/* #temperature { */
+/* 		border-radius: 0px 20px 20px 0px; */
+/* } */
+/**/
+/* #pulseaudio.microphone { */
+/* 		border-radius: 20px 0px 0px 20px; */
+/* } */
+/**/
+/* #memory { */
+/* 		border-radius: 0px 20px 20px 0px; */
+/* } */
+/**/
+/* #workspaces { */
+/* 		border-radius: 20px 0px 0px 20px; */
+/* } */
+/**/
+/* #window { */
+/* 		border-radius: 0px 20px 20px 0px; */
+/* } */
 
 /* only if not have in 'uwsm-manager' */
 
