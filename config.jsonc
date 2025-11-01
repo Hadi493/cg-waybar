@@ -10,7 +10,7 @@
     "hyprland/window"
   ],
   "modules-center": [
-    "tray",
+    "network",
     "clock",
     "custom/uptime",
     "custom/notification"
