@@ -6,8 +6,7 @@
   "spacing": 1,
   "margin": 0,
   "modules-left": [
-    "hyprland/workspaces",
-    "hyprland/window"
+    "niri/workspaces"
   ],
   "modules-center": [
     "tray",
@@ -25,7 +24,7 @@
     "temperature"
     // "network"
   ],
-  "hyprland/workspaces": {
+  "niri/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "format": "{name}",
@@ -49,11 +48,7 @@
       "5": []
     }
   },
-  "hyprland/window": {
-    "format": "{class}",
-    "max-length": 80
-    // "tooltip-format": "{class}"
-  },
+
   "custom/playerctl": {
     "format": " 󰐊 {}",
     "return-type": "json",
