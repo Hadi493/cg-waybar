@@ -3,27 +3,26 @@
   "position": "top",
   "height": 30,
   "output": "eDP-1",
-  "spacing": 1,
+  "spacing": 10,
   "margin": 0,
   "modules-left": [
-    "hyprland/workspaces",
     "hyprland/window"
   ],
   "modules-center": [
-    "tray",
-    "clock",
-    "custom/uptime",
-    "custom/notification"
-  ],
-  "modules-right": [
-    "pulseaudio#microphone",
-    "pulseaudio",
-    "battery",
-    "backlight",
     "cpu",
     "memory",
-    "temperature"
-    // "network"
+    "temperature",
+    "hyprland/workspaces",
+    "clock",
+    "custom/uptime"
+  ],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "pulseaudio#microphone",
+    "battery",
+    "backlight",
+    "custom/notification"
   ],
   "hyprland/workspaces": {
     "disable-scroll": true,
