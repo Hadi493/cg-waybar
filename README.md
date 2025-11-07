@@ -2,7 +2,7 @@
 
 A clean waybar configuration for Hyprland.
 
-![screenshot](./cg-waybar.png)
+![screenshot](./waybar.png)
 
 ## Features
 
