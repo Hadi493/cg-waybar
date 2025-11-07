@@ -82,6 +82,10 @@ window#waybar {
     border-color: @blue;
 }
 
+#custom-notification {
+    padding: 4px 8px 4px 12px; /* Adjusted padding for notification module */
+}
+
 #workspaces button.focused,
 #workspaces button.active {
     /* background-color: @background; */
