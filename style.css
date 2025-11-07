@@ -41,7 +41,7 @@ window#waybar {
     color: @text;
 }
 
-#workspaces, #window, #clock, #custom-uptime, #custom-notification, #pulseaudio, #pulseaudio.microphone, #battery, #backlight, #cpu, #memory, #temperature, #tray {
+#workspaces, #window, #clock, #custom-uptime, #custom-notification, #pulseaudio, #pulseaudio.microphone, #battery, #backlight, #cpu, #memory, #temperature, #tray, #custom-wlogout {
     background-color: @surface0; /* Solid Catppuccin background */
     padding: 2px 10px;
     margin: 3px 5px;
@@ -122,6 +122,11 @@ window#waybar {
 
 #custom-notification {
     color: @sapphire;
+}
+
+#custom-wlogout {
+    color: @red;
+	padding: 4px 15px 4px 10px; /* Adjusted padding for notification module */
 }
 
 #window {
