@@ -11,8 +11,7 @@
   "modules-center": [
     "tray",
     "clock",
-    "custom/uptime",
-    "custom/notification"
+    "custom/uptime"
   ],
   "modules-right": [
     "pulseaudio#microphone",
@@ -21,31 +20,32 @@
     "backlight",
     "cpu",
     "memory",
-    "temperature"
+    "temperature",
+	"custom/notification"
     // "network"
   ],
   "niri/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
     "format": "{name}",
-    "format-icons": {
-      "1": "󰖟",
-      "2": "",
-      "3": "",
-      "4": "󰭹",
-      "5": "󰕧",
-      "6": "",
-      "7": "",
-      "8": "󰣇",
-      "9": "",
-      "10": ""
-    },
+    // "format-icons": {
+    //   "1": "󰖟",
+    //   "2": "",
+    //   "3": "",
+    //   "4": "󰭹",
+    //   "5": "󰕧",
+    //   "6": "",
+    //   "7": "",
+    //   "8": "󰣇",
+    //   "9": "",
+    //   "10": ""
+    // },
     "persistent_workspaces": {
-      "1": [],
-      "2": [],
-      "3": [],
-      "4": [],
-      "5": []
+      // "1": [],
+      // "2": [],
+      // "3": [],
+      // "4": [],
+      // "5": []
     }
   },
 
