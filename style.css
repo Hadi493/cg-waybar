@@ -1,5 +1,5 @@
 /*
- * Modular Islands Theme for Waybar (with animations)
+ * Animated Border Theme for Waybar
  */
 
 /* Catppuccin-Mocha Palette */
@@ -22,16 +22,10 @@
 @define-color mauve #cba6f7;
 @define-color pink #f5c2e7;
 
-@keyframes breathing-glow {
-    0% { box-shadow: 0 0 8px 2px rgba(203, 166, 247, 0.3); } /* Mauve */
-    50% { box-shadow: 0 0 12px 4px rgba(203, 166, 247, 0.5); }
-    100% { box-shadow: 0 0 8px 2px rgba(203, 166, 247, 0.3); }
-}
-
-@keyframes subtle-pulse {
-    0% { color: @red; }
-    50% { color: @text; }
-    100% { color: @red; }
+@keyframes border-flow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 * {
@@ -47,18 +41,26 @@ window#waybar {
     color: @text;
 }
 
-/* Individual module styling */
 #workspaces, #window, #clock, #custom-uptime, #custom-notification, #pulseaudio, #pulseaudio.microphone, #battery, #backlight, #cpu, #memory, #temperature, #tray {
-    background-color: @surface0;
+    background-color: @surface0; /* Solid Catppuccin background */
     padding: 2px 10px;
     margin: 3px 5px;
     border-radius: 10px;
-    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+
+    /* Animated Border */
+    border-image: linear-gradient(90deg, @mauve, @sky, @pink, @mauve) 1;
+    background-size: 400% 400%;
+    animation: border-flow 3s linear infinite;
 }
 
 #workspaces:hover, #window:hover, #clock:hover, #custom-uptime:hover, #custom-notification:hover, #pulseaudio:hover, #pulseaudio.microphone:hover, #battery:hover, #backlight:hover, #cpu:hover, #memory:hover, #temperature:hover, #tray:hover {
-    background-color: @base;
-    box-shadow: 0 0 12px 4px rgba(205, 214, 244, 0.5); /* Enhanced glow on hover */
+    animation-play-state: paused;
+}
+
+#custom-notification {
+    padding: 4px 8px 4px 12px; /* Adjusted padding for notification module */
 }
 
 #workspaces button {
@@ -66,23 +68,20 @@ window#waybar {
     background-color: transparent;
     border-radius: 10px;
     padding: 2px 5px;
-    transition: all 0.3s ease;
 }
 
 #workspaces button.focused, #workspaces button.active {
     color: @mauve;
     border-bottom: 2px solid @mauve;
-    animation: breathing-glow 3s ease-in-out infinite;
 }
 
 #workspaces button.urgent {
     color: @red;
     border-bottom: 2px solid @red;
-    animation: subtle-pulse 2s ease-in-out infinite;
 }
 
 #battery.critical, #temperature.critical {
-    animation: subtle-pulse 2s ease-in-out infinite;
+    border: 2px solid @red;
 }
 
 #clock {
@@ -127,4 +126,8 @@ window#waybar {
 
 #window {
     color: @blue;
+}
+
+#tray {
+    color: @text;
 }
