@@ -129,35 +129,31 @@ window#waybar {
     color: @foreground;
 }
 
-
-
-
-
-/* Static Rounded */
-
-#custom-notification {
-		border-radius: 0px 20px 20px 0px;
-}
-
-#tray {
-		border-radius: 20px 0px 0px 20px;
-}
-
-#temperature {
-		border-radius: 0px 20px 20px 0px;
-}
-
-#pulseaudio.microphone {
-		border-radius: 20px 0px 0px 20px;
-}
-
-#workspaces {
-		border-radius: 20px 0px 0px 20px;
-}
-
-#window {
-		border-radius: 0px 20px 20px 0px;
-}
+/* Static Rounded */ 
+/**/
+/* #custom-notification { */
+/* 		border-radius: 0px 20px 20px 0px; */
+/* } */
+/**/
+/* #tray { */
+/* 		border-radius: 20px 0px 0px 20px; */
+/* } */
+/**/
+/* #temperature { */
+/* 		border-radius: 0px 20px 20px 0px; */
+/* } */
+/**/
+/* #pulseaudio.microphone { */
+/* 		border-radius: 20px 0px 0px 20px; */
+/* } */
+/**/
+/* #workspaces { */
+/* 		border-radius: 20px 0px 0px 20px; */
+/* } */
+/**/
+/* #window { */
+/* 		border-radius: 0px 20px 20px 0px; */
+/* } */
 
 /* only if not have in 'uwsm-manager' */
 
