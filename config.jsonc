@@ -1,9 +1,9 @@
 {
   "layer": "top",
   "position": "top",
-  "height": 30,
+  "height": 0,
   "output": "eDP-1",
-  "spacing": 10,
+  "spacing": 5,
   "margin": 0,
   "modules-left": [
     "hyprland/window"
@@ -22,7 +22,8 @@
     "pulseaudio#microphone",
     "battery",
     "backlight",
-    "custom/notification"
+    "custom/notification",
+    "custom/wlogout"
   ],
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -250,6 +251,11 @@
   "tray": {
     "icon-size": 20,
     "spacing": 5,
+    "class": "animated-border"
+  },
+  "custom/wlogout": {
+    "format": "",
+    "on-click": "~/.config/waybar/scripts/wlogout-menu.sh",
     "class": "animated-border"
   },
       "custom/notification": {
