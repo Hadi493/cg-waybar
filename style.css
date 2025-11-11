@@ -41,7 +41,7 @@ window#waybar {
     color: @text;
 }
 
-#workspaces, #window, #clock, #custom-uptime, #custom-notification, #pulseaudio, #pulseaudio.microphone, #battery, #backlight, #cpu, #memory, #temperature, #tray, #custom-wlogout {
+#window, #clock, #custom-uptime, #custom-notification, #pulseaudio, #pulseaudio.microphone, #battery, #backlight, #cpu, #memory, #temperature, #tray, #custom-wlogout {
     background-color: @surface0; /* Solid Catppuccin background */
     padding: 2px 10px;
     margin: 3px 5px;
@@ -59,6 +59,21 @@ window#waybar {
     animation-play-state: paused;
 }
 
+#workspaces {
+    background-color: @surface0;     
+	padding: 2px 10px;
+    margin: 3px 5px;
+    border-radius: 0px;
+    border: 2px solid transparent;
+	border-bottom: none;
+    background-clip: padding-box;
+
+    /* Animated Border */
+    border-image: linear-gradient(90deg, @mauve, @sky, @pink, @mauve) 1;
+    background-size: 400% 400%;
+    animation: border-flow 3s linear infinite;
+}
+
 #custom-notification {
     padding: 4px 8px 4px 12px; /* Adjusted padding for notification module */
 }
@@ -66,8 +81,8 @@ window#waybar {
 #workspaces button {
     color: @subtext0;
     background-color: transparent;
-    border-radius: 10px;
-    padding: 2px 5px;
+    border-radius: 0px;
+    padding: 2px 2px;
 }
 
 #workspaces button.focused, #workspaces button.active {
