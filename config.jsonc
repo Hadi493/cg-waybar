@@ -23,7 +23,8 @@
 			"memory", 
 			"temperature", 
 			"custom/uptime", 
-		    "custom/notification"
+		    "custom/notification",
+            "custom/wlogout"
 	],
 
 
@@ -257,5 +258,12 @@
         "on-click": "sleep 0.1 && swaync-client -t -sw",
         "on-click-right": "sleep 0.1 && swaync-client -d -sw",
         "escape": true
+    },
+
+    "custom/wlogout": {
+        "tooltip": "true",
+        "tooltip-format": "wlogout",
+        "format": " ",
+        "on-click": "~/.config/waybar/scripts/wlogout.sh"
     }
 }

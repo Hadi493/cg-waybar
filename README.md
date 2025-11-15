@@ -5,104 +5,96 @@ A clean waybar configuration for Hyprland.
 ### Screenshot
 ![screenshot](./waybar.png)
 
-## Features
+## Requirements 
 
-This configuration displays the following modules:
+**Core Components:**
 
-**Left modules:**
-- Hyprland Workspaces
-- Media Player Controls (`playerctl`)
-- Active Window Title
+*   `waybar`: The status bar itself.
+*   `hyprland`: The Wayland compositor this configuration is designed for.
 
-**Center modules:**
-- Clock with Calendar
+**Launchers & Menus:**
 
-**Right modules:**
-- Audio controls (speaker + microphone)
-- Brightness control
-- System monitoring (CPU, memory, temperature)
-- Uptime
-- Network status
-- Battery status
-- System tray
+*   `rofi`: Used for various menus like the control center, power menu, and quick actions.
+*   `wlogout`: Used as a logout menu.
 
-## Dependencies
+**Notifications:**
 
-This configuration relies on several external tools and packages to function correctly. The list below corresponds to the modules **currently active** in the `config.jsonc` file.
+*   `swaync` or `dunst`: For notification management.
+*   `notify-send`: For sending notifications from scripts.
 
-### Main Components
-- **`waybar`**: The bar itself.
-- **`hyprland`**: The compositor (the config is tailored for it).
-- **`kitty`**: The terminal used for most `on-click` actions.
-- **Nerd Font**: A font with icons is required. The config uses `Iosevka Nerd Font`.
+**System & Hardware Control:**
 
-### Active Module Dependencies
-- **`playerctl`**: For the media player module.
-- **`pavucontrol`**: For the audio control panel on click.
-- **`pipewire-pulse`** or **`pulseaudio-utils`**: Provides `pactl` for volume control.
-- **`brightnessctl`**: For backlight/brightness control.
-- **`htop`**: For monitoring CPU/Memory on click.
-- **`s-tui`**: For monitoring temperature on click.
-- **`network-manager-applet`**: Provides `nmtui` for network management on click.
+*   `nmcli`: To manage network connections (Wi-Fi).
+*   `bluetoothctl`: To manage Bluetooth devices.
+*   `brightnessctl`: To control screen brightness.
+*   `wpctl` (part of `wireplumber`): To control audio volume.
+*   `pactl` (part of `pulseaudio`): To control audio volume.
+*   `systemctl`: For system-level actions like reboot, shutdown, and suspend.
+*   `hyprlock`: For screen locking.
+
+**Terminal Emulators:**
+
+*   `kitty`: Used to launch terminal applications like `htop`, `nmtui`, etc.
+
+**Utilities:**
+
+*   `jq`: For parsing JSON output from `hyprctl`.
+*   `playerctl`: For controlling media players.
+*   `curl`: For fetching weather information.
+*   `fortune`: For displaying a random quote.
+*   `checkupdates` (part of `pacman-contrib` on Arch Linux): For checking for package updates.
+*   `htop`: For process monitoring.
+*   `s-tui`: For stress testing and monitoring.
+*   `nmtui`: For network management in the terminal.
+*   `gdu`: For disk usage analysis.
+*   `pavucontrol`: For audio volume control.
+*   `fcitx5-configtool`: For input method configuration.
+*   `gnome-control-center`: As a fallback for system settings.
+*   `setxkbmap`: As a fallback for keyboard layout switching.
+*   `cal`: For displaying a calendar.
+*   `pkill`: For process management.
+
+**Fonts:**
+
+*   `Iosevka Nerd Font`: The primary font used in the `style.css`.
+*   `JetBrains Mono`: Used in the `control_center.sh` script's rofi theme.
 
 ## Installation
 
-1.  **Install Dependencies:**
-    Install all the packages listed in the **Dependencies** section using your package manager. For Arch Linux:
-    ```bash
-    sudo pacman -S waybar hyprland kitty playerctl pavucontrol pipewire-pulse brightnessctl htop s-tui network-manager-applet
-    ```
-    *(Note: You may need to install a Nerd Font like `ttf-iosevka-nerd` from the AUR or manually)*
+1.  **Install all the required packages.**
 
-2.  **Clone the Repository:**
-    ```bash
-    git clone https://github.com/Hadi493/cg-waybar.git ~/.config/waybar
-    ```
-    *(If you already have a `~/.config/waybar` directory, back it up first or clone into a different directory and copy the files over.)*
+    For Arch Linux, you can use the following command:
 
-3.  **Reload Waybar:**
-    Restart Waybar for the changes to take effect.
     ```bash
-    killall waybar && waybar &
+    sudo pacman -S waybar hyprland rofi wlogout swaync networkmanager bluez brightnessctl wireplumber pulseaudio systemd hyprlock kitty jq playerctl curl fortune-mod pacman-contrib htop btop s-tui nmtui gdu pavucontrol fcitx5-configtool setxkbmap util-linux pkill ttf-iosevka-nerd ttf-jetbrains-mono
+    ```
+
+2.  **Clone this repository to your `~/.config/` directory:**
+
+    ```bash
+    git clone https://github.com/cyber-green/waybar-config.git ~/.config/waybar
+    ```
+
+3.  **Make the scripts executable:**
+
+    ```bash
+    chmod +x ~/.config/waybar/scripts/*.sh
     ```
 
 ## Usage
 
-### Interactive Controls
+1.  **Launch Waybar.**
 
-**Workspaces:**
-- Hover/Click to switch workspaces.
+    You can launch Waybar from your terminal:
 
-**PlayerCTL (Music):**
-- Left click: Play/Pause
-- Right click: Stop
-- Scroll: Adjust volume
+    ```bash
+    waybar
+    ```
 
-**Clock:**
-- Alt-Click: Toggle time/date format
-- Calendar popup on hover
+    Or, you can add it to your Hyprland configuration to launch it automatically on startup:
 
-**Audio (PulseAudio):**
-- Left click: Open `pavucontrol`
-- Right click: Mute/unmute speaker
-- Scroll: Adjust speaker volume
+    ```
+    exec-once = waybar
+    ```
 
-**Microphone:**
-- Left click: Mute/unmute microphone
-- Scroll: Adjust microphone volume
-
-**Brightness:**
-- Scroll: Adjust screen brightness
-
-**Network:**
-- Left click: Open network manager (`nmtui`)
-
-**System Monitoring:**
-- Click CPU/Memory: Open `htop`
-- Click Temperature: Open `s-tui`
-
-### Customization
-
-The configuration includes several other modules that are not enabled by default (e.g., `custom/weather`, `custom/updates`, `disk`, `custom/language`). You can enable them by adding them to `modules-left`, `modules-center`, or `modules-right` in `config.jsonc`. If you enable them, make sure you have their respective dependencies installed.
-
-Edit `config.jsonc` for module settings and `style.css` for appearance.
+2.  **Enjoy your new Waybar!**
