@@ -128,7 +128,7 @@ window#waybar {
 #mode, #mpd, #custom-weather, #custom-playerctl, #clock, #cpu,
 #memory, #temperature, #battery, #network, #pulseaudio,
 #backlight, #disk, #custom-uptime, #custom-updates, #custom-quote,
-#custom-language, #idle_inhibitor, #tray, #window {
+#custom-language, #idle_inhibitor, #tray, #window, #notification_center, #custom-notification {
     padding: 0 10px;
     margin: 0 2px;
     background-color: @background;
@@ -141,7 +141,7 @@ window#waybar {
 #mode:hover, #mpd:hover, #custom-weather:hover, #custom-playerctl:hover, #clock:hover, #cpu:hover,
 #memory:hover, #temperature:hover, #battery:hover, #network:hover, #pulseaudio:hover,
 #backlight:hover, #disk:hover, #custom-uptime:hover, #custom-updates:hover, #custom-quote:hover,
-#custom-language:hover, #idle_inhibitor:hover {
+#custom-language:hover, #idle_inhibitor:hover, #custom-notification:hover {
     background-color: @background-light;
     border-color: @blue;
 }

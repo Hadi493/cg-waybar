@@ -5,9 +5,26 @@
     "output": "eDP-1",
     "spacing": 1,
     "margin": 0,
-    "modules-left": ["hyprland/workspaces", "hyprland/window", "custom/playerctl"],
-    "modules-center": ["clock"],
-    "modules-right": ["pulseaudio", "pulseaudio#microphone", "battery", "backlight", "cpu", "memory", "temperature", "custom/uptime", "tray"],
+    "modules-left": [
+			"hyprland/workspaces", 
+			"hyprland/window", 
+			"custom/playerctl"
+	],
+    "modules-center": [
+			"clock",
+			"tray"
+	],
+    "modules-right": [
+			"pulseaudio", 
+			"pulseaudio#microphone", 
+			"battery", 
+			"backlight", 
+			"cpu", 
+			"memory", 
+			"temperature", 
+			"custom/uptime", 
+		    "custom/notification"
+	],
 
 
     "hyprland/workspaces": {
@@ -221,5 +238,24 @@
     "tray": {
         "icon-size": 20,
         "spacing": 5
+    },
+
+    "custom/notification": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󰂞 ",
+            "none": "󰂜",
+            "dnd-notification": "󰂛 ",
+            "dnd-none": "󰂜 ",
+            "inhibited-notification": "󰂜 ",
+            "inhibited-none": "󰂜 "
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "sleep 0.1 && swaync-client -t -sw",
+        "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+        "escape": true
     }
 }
