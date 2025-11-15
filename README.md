@@ -98,3 +98,11 @@ A clean waybar configuration for Hyprland.
     ```
 
 2.  **Enjoy your new Waybar!**
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Contributions are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for details.
