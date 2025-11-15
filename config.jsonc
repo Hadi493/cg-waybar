@@ -15,6 +15,7 @@
 			"tray"
 	],
     "modules-right": [
+		    // "network",
 			"pulseaudio", 
 			"pulseaudio#microphone", 
 			"battery", 
