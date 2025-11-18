@@ -10,11 +10,13 @@
 			"hyprland/window", 
 			"custom/playerctl"
 	],
+
     "modules-center": [
-			"clock",
-			"tray"
+			"clock"
 	],
-    "modules-right": [
+
+    "modules-right":[
+			"tray",
 			"pulseaudio", 
 			"pulseaudio#microphone", 
 			"battery", 
@@ -55,14 +57,14 @@
 
     "hyprland/window": {
         "format": "{class}",
-        "max-length": 20,
+        "max-length": 7,
         "tooltip-format": "{title}"
     },
 
     "custom/playerctl": {
-        "format": " 󰐊 {}",
+        "format": "󰐊 {}",
         "return-type": "json",
-        "max-length": 40,
+        "max-length": 100,
         "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
         "on-click": "playerctl play-pause",
         "on-click-right": "playerctl stop",
