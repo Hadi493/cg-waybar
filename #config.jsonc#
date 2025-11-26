@@ -9,11 +9,11 @@
 			"hyprland/workspaces", 
 			"hyprland/window", 
 			"custom/playerctl"
-	],
+    ],
 
     "modules-center": [
 			"clock"
-	],
+     ],
 
     "modules-right":[
 			"tray",
@@ -27,7 +27,7 @@
 			"custom/uptime", 
 		    "custom/notification",
             "custom/wlogout"
-	],
+      ],
 
 
     "hyprland/workspaces": {
