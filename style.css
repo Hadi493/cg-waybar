@@ -103,6 +103,15 @@ window#waybar {
     border-radius: 0px;
 }
 
+#workspaces button#niri-workspace-5 {
+  background: None;
+  border: None;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
 #workspaces button.focused,
 #workspaces button.active {
     background-color: @blue;
