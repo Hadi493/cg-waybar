@@ -1,5 +1,4 @@
 {
-    "layer": "left",
     "position": "top",
     "height": 10,
     "output": "eDP-1",
@@ -51,7 +50,7 @@
         "interval": 1,
         "format": "  {icon0}{icon1}{icon2}{icon3} {usage:>2}%",
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-        "on-click": "ghostty -e htop"
+        "on-click": "kitty -e btop"
     },
 
     "memory": {
