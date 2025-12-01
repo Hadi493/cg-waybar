@@ -1,4 +1,3 @@
-/* Catppuccin (Mocha) - Floating Style */
 @define-color background #1e1e2e;
 @define-color background-light #313244;
 @define-color foreground #cdd6f4;
@@ -47,19 +46,17 @@
 * {
     border: none;
     border-radius: 0;
-    font-family: "Iosevka Term SS04";
-    font-size: 20px;
+    font-family: 'Iosevka Term SS04';
+    font-size: 18px;
     min-height: 0;
 }
 
-/* Main waybar window - transparent background */
 window#waybar {
     background-color: transparent;
     color: @foreground;
     margin: 10px 10px 0 10px;
 }
 
-/* Floating sections styling */
 .modules-left {
     background-color: transparent;
     border-radius: 0px;
@@ -81,7 +78,6 @@ window#waybar {
     margin-left: 10px;
 }
 
-/* Workspaces styling */
 #workspaces {
     margin: 0;
     padding: 0;
@@ -90,7 +86,7 @@ window#waybar {
 }
 
 #workspaces button {
-    padding: 6px 8px;
+    padding: 4px 6px;
     background-color: transparent;
     color: #89B4FA;
     margin: 1px 5px;
@@ -163,7 +159,7 @@ window#waybar {
 #custom-playerctl { color: @playerctl-color; }
 #custom-playerctl.Playing { color: @cyan; }
 #custom-playerctl.Paused { color: @orange; }
-#clock { color: @clock-color; font-weight: bold; }
+#clock { color: @clock-color; font-weight: 500; }
 #cpu { color: @cpu-color; }
 #memory { color: @memory-color; }
 #temperature { color: @temperature-color; }
@@ -187,7 +183,6 @@ window#waybar {
 
 #window {
     color: @foreground;
-    font-style: italic;
     border-radius: 0px;
 }
 
@@ -214,10 +209,9 @@ window#waybar {
     border-radius: 0px;
 }
 
-/* Language switcher styling */
 #custom-language {
     color: @magenta;
-    font-weight: bold;
+    font-weight: 500;
     min-width: 60px;
     transition: all 0.3s ease;
 }
