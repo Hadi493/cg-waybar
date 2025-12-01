@@ -6,9 +6,9 @@
     "spacing": 1,
     "margin": 0,
     "modules-left": [
-			"niri/workspaces", 
-			"hyprland/window", 
-			"custom/playerctl"
+			"niri/workspaces",
+			"cpu",
+			"tray"
 	],
 
     "modules-center": [
@@ -16,12 +16,10 @@
 	],
 
     "modules-right":[
-			"tray",
 			"pulseaudio", 
 			"pulseaudio#microphone", 
 			"battery", 
 			"backlight", 
-			"cpu", 
 			"memory", 
 			"temperature", 
 			"custom/uptime", 
@@ -36,94 +34,24 @@
         "format": "{name}",
     },
 
-    "hyprland/window": {
-        "format": "{class}",
-        "max-length": 7,
-        "tooltip-format": "{title}"
-    },
-
-    "custom/playerctl": {
-        "format": "󰐊 {}",
-        "return-type": "json",
-        "max-length": 100,
-        "exec": "playerctl -a metadata --format '{\"text\": \"{{artist}} - {{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{artist}} - {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
-        "on-click": "playerctl play-pause",
-        "on-click-right": "playerctl stop",
-        "on-scroll-up": "playerctl volume 0.05+",
-        "on-scroll-down": "playerctl volume 0.05-"
-    },
-
-    "custom/weather": {
-        "exec": "curl 'https://wttr.in/?format=1'",
-        "interval": 3600,
-        "format": "{}",
-        "tooltip": true
-    },
-
-    "custom/quote": {
-        "format": "󰚛 {}",
-        "interval": 3600,
-        "exec": "fortune -s",
-        "on-click": "fortune | yad --text-info --width=400 --height=200 --title='Fortune'",
-        "tooltip": true
-    },
-
-    "custom/updates": {
-        "format": "󰚰 {}",
-        "exec": "checkupdates | wc -l",
-        "interval": 3600,
-        "on-click": "kitty -e sudo pacman -Syu",
-        "signal": 8
-    },
-
-    "custom/uptime": {
+     "custom/uptime": {
         "format": "󰔟 {}",
         "exec": "uptime -p | sed 's/up //; s/ days/d/; s/ hours/h/; s/ minutes/m/'",
         "interval": 60
     },
 
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "󰈈",
-            "deactivated": "󰈉"
-        },
-        "tooltip": true
-    },
-
     "clock": {
-        "interval": 1,
-        "format": "󰥔 {:%I:%M:%S %p}",
-        "format-alt": "󰃮 {:%D}",
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "calendar": {
-            "mode": "month",
-            "mode-mon-col": 3,
-            "weeks-pos": "right",
-            "on-scroll": 1,
-            "on-click-right": "mode",
-            "format": {
-                "months": "<span color='#d3c6aa'><b>{}</b></span>",
-                "days": "<span color='#e67e80'>{}</span>",
-                "weeks": "<span color='#a7c080'><b>W{}</b></span>",
-                "weekdays": "<span color='#7fbbb3'><b>{}</b></span>",
-                "today": "<span color='#dbbc7f'><b><u>{}</u></b></span>"
-            }
-        },
-        "actions": {
-            "on-click-right": "mode",
-            "on-click-forward": "tz_up",
-            "on-click-backward": "tz_down",
-            "on-scroll-up": "shift_up",
-            "on-scroll-down": "shift_down"
-        }
+        "timezone": "Asia/Dhaka",
+        "tooltip": false,
+        "format": "{:%I:%M:%S %p -  %a, %d, %b}",
+        "interval": 1
     },
 
     "cpu": {
-        "format": "󰘚 {usage}%",
-        "tooltip": true,
         "interval": 1,
-        "on-click": "kitty -e htop"
+        "format": "  {icon0}{icon1}{icon2}{icon3} {usage:>2}%",
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "on-click": "ghostty -e htop"
     },
 
     "memory": {
