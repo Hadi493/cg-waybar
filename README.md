@@ -1,4 +1,4 @@
-# Waybar Configuration
+# [Hadi](https://github.com/Hadi493)'s Personal [waybar](https://waybar.org/) config
 
 A clean waybar configuration for Hyprland.
 
