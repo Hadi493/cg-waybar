@@ -10,5 +10,6 @@ A clean waybar configuration for Hyprland.
 ## Quick setup
 Backup the `waybar` config if you have
 ```bash
-git clone https://github.com/Hadi493/cg-waybar.git ~/.config/waybar
+git clone https://github.com/Hadi493/cg-waybar.git ~/.config/waybar \
+killall waybar && waybar &
 ```
