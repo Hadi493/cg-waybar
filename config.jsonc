@@ -1,17 +1,19 @@
 {
     "position": "top",
-    "height": 10,
+    "height": 30,
     "output": "eDP-1",
     "spacing": 1,
     "margin": 0,
     "modules-left": [
 			"niri/workspaces",
 			"cpu",
+			"temperature", 
 			"tray"
 	],
 
     "modules-center": [
-			"clock"
+		   "custom/cava",
+		   "clock"
 	],
 
     "modules-right":[
@@ -20,7 +22,6 @@
 			"battery", 
 			"backlight", 
 			"memory", 
-			"temperature", 
 			"custom/uptime", 
 		    "custom/notification",
             "custom/wlogout"
@@ -48,9 +49,14 @@
 
     "cpu": {
         "interval": 1,
-        "format": "  {icon0}{icon1}{icon2}{icon3} {usage:>2}%",
-        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
+        "format": " {usage}%",
         "on-click": "kitty -e btop"
+    },
+
+    "custom/cava": {
+        "exec": "~/.config/waybar/scripts/cava.sh",
+        "return-type": "json",
+        "format": "{}"
     },
 
     "memory": {

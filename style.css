@@ -1,22 +1,30 @@
+/*
+* Catppuccin Mocha theme for Waybar
+* Maintainer: rubyowo
+*/
+
 @import "mocha.css";
 
 * {
-    border: none;
-    border-radius: 0;
-    font-family: 'Iosevka Term SS04';
-    font-size: 18px;
-    min-height: 0;
+  border: none;
+  border-radius: 0;
+  font-family: "Iosevka Term SS04";
+  font-weight: bold;
+  font-size: 16px;
+  min-height: 0;
 }
 
 window#waybar {
-    background-color: transparent;
-    color: @text;
-    transition-property: background-color;
-    transition-duration: .5s;
-    margin-left: 10px;
-    margin-right: 10px;
+  background: transparent;
 }
 
+.modules-left,
+.modules-center,
+.modules-right {
+  padding: 0 10px;
+}
+
+#workspaces,
 #clock,
 #battery,
 #pulseaudio,
@@ -27,60 +35,51 @@ window#waybar {
 #backlight,
 #tray,
 #custom-uptime,
-#custom-notification {
-    background-color: @surface0;
-    padding: 3px 10px;
-    margin: 10px 3px;
-    border-radius: 0px;
-    color: @text;
+#custom-notification,
+#custom-wlogout,
+#custom-cava {
+  background-color: @base;
+  color: @text;
+  padding: 5px 15px;
+  margin: 4px 3px;
+  border: 2px solid @surface0;
+  border-radius: 10px;
 }
 
-#workspaces, #custom-wlogout {
-    background-color: @surface0;
-    padding: 3px 10px;
-    margin: 10px 15px;
-    border-radius: 0px;
-    color: @text;
+#custom-cava {
+    color: @lavender;
 }
 
 #workspaces button {
-    padding: 0 5px;
-    background-color: transparent;
-    color: @subtext0;
-    border-bottom: 2px solid transparent;
+  padding: 0 5px;
+  background-color: transparent;
+  color: @subtext0;
+  border-radius: 5px;
 }
 
 #workspaces button.active {
-    color: @mauve;
-    border-bottom: 2px solid @mauve;
+  color: @mauve;
+  background-color: @surface0;
 }
 
 #workspaces button:hover {
-    background-color: @surface1;
-    color: @text;
-}
-
-#workspaces button#niri-workspace-5 {
-    background: none;
-    border: none;
-    font-size: 0;
-    padding: 0;
-    margin: 0;
-    min-width: 0;
+  background-color: @surface1;
+  color: @text;
 }
 
 #pulseaudio.muted {
-    color: @red;
+  color: @red;
 }
 
-#battery.charging, #battery.plugged {
-    color: @green;
+#battery.charging,
+#battery.plugged {
+  color: @green;
 }
 
 #battery.critical:not(.charging) {
-    color: @red;
+  color: @red;
 }
 
 #custom-wlogout {
-    color: @red;
+  color: @red;
 }
