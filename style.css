@@ -59,7 +59,7 @@ window#waybar {
 
 #workspaces button.active {
   color: @mauve;
-  background-color: @surface0;
+  background-color: @surface5;
 }
 
 #workspaces button:hover {
@@ -82,4 +82,13 @@ window#waybar {
 
 #custom-wlogout {
   color: @red;
+}
+
+#workspaces button#niri-workspace-5 {
+  background: None;
+  border: None;
+  font-size: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
 }
