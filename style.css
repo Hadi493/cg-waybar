@@ -100,14 +100,14 @@ window#waybar {
 #workspaces button:hover {
     background-color: @background-light;
     color: @cyan;
-    border-radius: 99px;
+    border-radius: 0px;
 }
 
 #workspaces button.focused,
 #workspaces button.active {
     background-color: @blue;
     color: @background;
-    border-radius: 99%;
+    border-radius: 0%;
     font-weight: bold;
 }
 
