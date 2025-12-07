@@ -6,24 +6,26 @@
     "spacing": 1,
     "margin": 0,
     "modules-left": [
-			"hyprland/workspaces", 
-			"hyprland/window", 
-			"custom/playerctl"
+			"hyprland/workspaces",
+			"pulseaudio",
+			"pulseaudio#microphone", 
+			"idle_inhibitor"
+			//"hyprland/window",
+			//"custom/playerctl"
 	],
     "modules-center": [
+			"custom/uptime", 
 			"clock",
+			"custom/updates",
 			"tray"
 	],
     "modules-right": [
 		    //"network",
-			"pulseaudio", 
-			"pulseaudio#microphone", 
 			"battery", 
 			"backlight", 
 			"cpu", 
 			"memory", 
 			"temperature", 
-			"custom/uptime", 
 		    "custom/notification",
             "custom/wlogout"
 	],
@@ -103,15 +105,15 @@
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
-            "activated": "󰈈",
-            "deactivated": "󰈉"
+            "activated": "󰈈 ",
+            "deactivated": "󰈉 "
         },
         "tooltip": true
     },
 
     "clock": {
         "interval": 1,
-        "format": "󰥔 {:%I:%M:%S %p}",
+        "format": "{:%I:%M:%S %p - %d/%m}",
         "format-alt": "󰃮 {:%D}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "calendar": {
@@ -141,13 +143,13 @@
         "format": "󰘚 {usage}%",
         "tooltip": true,
         "interval": 1,
-        "on-click": "kitty -e htop"
+        "on-click": "kitty -e btop"
     },
 
     "memory": {
         "format": "󰍛 {}%",
         "interval": 1,
-        "on-click": "kitty -e htop"
+        "on-click": "kitty -e btop"
     },
 
     "temperature": {
@@ -213,7 +215,7 @@
 
     "backlight": {
         "format": "{icon} {percent}%",
-        "format-icons": ["󰃞", "󰃟", "󰃠"],
+        "format-icons": ["󰃞 ", "󰃟 ", "󰃠 "],
         "on-scroll-up": "brightnessctl set +5%",
         "on-scroll-down": "brightnessctl set 5%-"
     },
@@ -223,18 +225,6 @@
         "format": "󰋊 {percentage_used}%",
         "path": "/",
         "on-click": "kitty -e gdu /"
-    },
-
-    "custom/language": {
-        "format": "⌨ {}",
-        "exec": "~/.config/waybar/scripts/language-switcher.sh",
-        "on-click": "~/.config/waybar/scripts/language-switcher.sh switch",
-        "on-click-right": "fcitx5-configtool",
-        "interval": 2,
-        "tooltip": true,
-        "tooltip-format": "Current Input Language: {}\n\nLeft click: Switch language (Alt+Shift)\nRight click: Open input settings",
-        "max-length": 10,
-        "escape": true
     },
 
     "tray": {
@@ -247,7 +237,7 @@
         "format": "{icon}",
         "format-icons": {
             "notification": "󰂞 ",
-            "none": "󰂜",
+            "none": "󰂜 ",
             "dnd-notification": "󰂛 ",
             "dnd-none": "󰂜 ",
             "inhibited-notification": "󰂜 ",
