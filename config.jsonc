@@ -17,10 +17,10 @@
 			"custom/uptime", 
 			"clock",
 			"custom/updates",
+		    "network",
 			"tray"
 	],
     "modules-right": [
-		    //"network",
 			"battery", 
 			"backlight", 
 			"cpu", 
