@@ -48,7 +48,7 @@
     border: none;
     border-radius: 0;
     font-family: "Iosevka Nerd Font";
-    font-size: 16px;
+    font-size: 14px;
     min-height: 0;
 }
 
@@ -63,21 +63,21 @@ window#waybar {
 .modules-left {
     background-color: transparent;
     border-radius: 0px;
-    padding: 5px 15px;
+    padding: 2px 10px;
     margin-right: 10px;
 }
 
 .modules-center {
     background-color: transparent;
     border-radius: 0px;
-    padding: 5px 20px;
+    padding: 2px 10px;
     margin: 0 10px;
 }
 
 .modules-right {
     background-color: transparent;
     border-radius: 0px;
-    padding: 5px 15px;
+    padding: 2px 10px;
     margin-left: 10px;
 }
 
@@ -127,7 +127,7 @@ window#waybar {
 /* Individual module styling */
 #mode, #mpd, #custom-weather, #custom-playerctl, #clock, #cpu,
 #memory, #temperature, #battery, #network, #pulseaudio,
-#backlight, #disk, #custom-uptime, #custom-updates, #custom-quote,
+#backlight, #disk, #custom-uptime, #custom-updates, #custom-updates-yay, #custom-quote,
 #custom-language, #idle_inhibitor, #tray, #window, #notification_center, #custom-notification, #custom-wlogout {
     padding: 0 10px;
     margin: 0 2px;
@@ -140,7 +140,7 @@ window#waybar {
 
 #mode:hover, #mpd:hover, #custom-weather:hover, #custom-playerctl:hover, #clock:hover, #cpu:hover,
 #memory:hover, #temperature:hover, #battery:hover, #network:hover, #pulseaudio:hover,
-#backlight:hover, #disk:hover, #custom-uptime:hover, #custom-updates:hover, #custom-quote:hover,
+#backlight:hover, #disk:hover, #custom-uptime:hover, #custom-updates:hover, #custom-updates-yay:hover, #custom-quote:hover,
 #custom-language:hover, #idle_inhibitor:hover, #custom-notification:hover, #custom-wlogout:hover {
     background-color: @background-light;
     border-color: @blue;
@@ -171,6 +171,7 @@ window#waybar {
 #disk { color: @disk-color; }
 #custom-uptime { color: @uptime-color; }
 #custom-updates { color: @updates-color; }
+#custom-updates-yay { color: @updates-color; }
 #custom-quote { color: @quote-color; }
 #idle_inhibitor { color: @idle-inhibitor-color; }
 #idle_inhibitor.activated { color: @idle-inhibitor-active-color; }
