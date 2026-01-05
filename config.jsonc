@@ -244,9 +244,9 @@
         "format": "{icon}",
         "format-icons": {
             "notification": "󰂞 ",
-            "none": "󰂜 ",
+            "none": "󰂟 ",
             "dnd-notification": "󰂛 ",
-            "dnd-none": "󰂜 ",
+            "dnd-none": "󰂛 ",
             "inhibited-notification": "󰂜 ",
             "inhibited-none": "󰂜 "
         },
