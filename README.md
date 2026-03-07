@@ -10,7 +10,7 @@ A clean waybar configuration for Hyprland.
 **Core Components:**
 
 *   `waybar`: The status bar itself.
-*   `hyprland`: The Wayland compositor this configuration is designed for.
+*   `hyprland` or `dwl`: The Wayland compositor this configuration is designed for.
 
 **Launchers & Menus:**
 
@@ -91,10 +91,18 @@ A clean waybar configuration for Hyprland.
     waybar
     ```
 
-    Or, you can add it to your Hyprland configuration to launch it automatically on startup:
+    Or, you can add it to your compositor configuration to launch it automatically on startup:
 
+    **Hyprland:**
     ```
     exec-once = waybar
+    ```
+
+    **dwl:**
+    Add it to your `autostart` script or launch it before `dwl`:
+    ```bash
+    waybar &
+    swaync &
     ```
 
 2.  **Enjoy your new Waybar!**

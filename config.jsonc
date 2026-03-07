@@ -1,17 +1,16 @@
 {
-    "layer": "bottom",
-    "position": "bottom",
+    "layer": "top",
+    "position": "top",
     "height": 10,
     "output": "eDP-1",
     "spacing": 0,
-    "margin": 0,
+    "margin": 10,
     "modules-left": [
-			"hyprland/workspaces",
+			"custom/dwl-tags",
+			"custom/dwl-window",
 			"pulseaudio",
 			"pulseaudio#microphone", 
 			"idle_inhibitor"
-			//"hyprland/window",
-			//"custom/playerctl"
 	],
     "modules-center": [
 			"custom/uptime", 
@@ -32,7 +31,27 @@
 	],
 
 
-    "hyprland/workspaces": {
+    "custom/dwl-tags": {
+        "format": "{}",
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/dwl_tags.sh",
+        "interval": 1
+    },
+
+    "custom/dwl-window": {
+        "format": "{}",
+        "return-type": "json",
+        "exec": "echo '{\"text\": \"dwl\"}'",
+        "interval": 5
+    },
+
+    "custom/dwl-status": {
+        "format": "󰖟 dwl ",
+        "tooltip": "DWL native modules require the IPC patch. Using placeholder.",
+        "on-click": "kitty -e man dwl"
+    },
+
+    "dwl/tags": {
         "disable-scroll": true,
         "all-outputs": true,
         "format": "{name}",
@@ -47,20 +66,12 @@
             "8": "󰣇",
             "9": "",
             "10": ""
-        },
-        "persistent_workspaces": {
-            "1": [],
-            "2": [],
-            "3": [],
-            "4": [],
-            "5": []
         }
     },
 
-    "hyprland/window": {
-        "format": "{class}",
-        "max-length": 20,
-        "tooltip-format": "{title}"
+    "dwl/window": {
+        "format": "{title}",
+        "max-length": 50
     },
 
     "custom/playerctl": {
@@ -251,10 +262,29 @@
             "inhibited-none": "󰂜 "
         },
         "return-type": "json",
+        "exec-if": "which swaync-client || which dunstctl",
+        "exec": "~/.config/waybar/scripts/notification_indicator.sh",
+        "on-click": "~/.config/waybar/scripts/notification_center.sh",
+        "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+        "escape": true
+    },
+
+    "custom/notification#swaync": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "󰂞 ",
+            "none": "󰂟 ",
+            "dnd-notification": "󰂛 ",
+            "dnd-none": "󰂛 ",
+            "inhibited-notification": "󰂜 ",
+            "inhibited-none": "󰂜 "
+        },
+        "return-type": "json",
         "exec-if": "which swaync-client",
         "exec": "swaync-client -swb",
-        "on-click": "sleep 0.1 && swaync-client -t -sw",
-        "on-click-right": "sleep 0.1 && swaync-client -d -sw",
+        "on-click": "swaync-client -t -sw",
+        "on-click-right": "swaync-client -d -sw",
         "escape": true
     },
 

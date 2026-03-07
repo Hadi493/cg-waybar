@@ -84,7 +84,11 @@ selected=$(echo -e "🔒 Lock Screen\n💤 Sleep\n🚪 Logout\n🔄 Reboot\n⏻ 
 case "$selected" in
     *"Lock Screen")
         dunstify "System" "Locking screen..." -i system-lock-screen
-        hyprlock
+        if command -v hyprlock &> /dev/null; then
+            hyprlock
+        elif command -v swaylock &> /dev/null; then
+            swaylock
+        fi
         ;;
     *"Sleep")
         confirm=$(echo -e "Yes\nNo" | rofi -dmenu -p "Sleep system?" -theme-str "$ROFI_THEME")
@@ -94,10 +98,14 @@ case "$selected" in
         fi
         ;;
     *"Logout")
-        confirm=$(echo -e "Yes\nNo" | rofi -dmenu -p "Logout from Hyprland?" -theme-str "$ROFI_THEME")
+        confirm=$(echo -e "Yes\nNo" | rofi -dmenu -p "Logout from session?" -theme-str "$ROFI_THEME")
         if [ "$confirm" = "Yes" ]; then
             dunstify "System" "Logging out..." -i system-log-out
-            hyprctl dispatch exit
+            if command -v hyprctl &> /dev/null; then
+                hyprctl dispatch exit
+            elif command -v pkill &> /dev/null; then
+                pkill -KILL -u $USER
+            fi
         fi
         ;;
     *"Reboot")

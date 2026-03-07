@@ -6,5 +6,11 @@ case "$chosen" in
     " Shutdown") systemctl poweroff ;;
     " Reboot") systemctl reboot ;;
     " Suspend") systemctl suspend ;;
-    " Logout") hyprctl dispatch exit ;;
+    " Logout") 
+        if command -v hyprctl &> /dev/null; then
+            hyprctl dispatch exit
+        elif command -v pkill &> /dev/null; then
+            pkill -KILL -u $USER
+        fi
+        ;;
 esac

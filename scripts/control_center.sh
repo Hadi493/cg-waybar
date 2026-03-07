@@ -207,7 +207,13 @@ system_controls() {
     
     case "$action" in
         *"Lock Screen") 
-            hyprlock 
+            if command -v hyprlock &> /dev/null; then
+                hyprlock
+            elif command -v swaylock &> /dev/null; then
+                swaylock
+            else
+                dunstify "Lock" "No locker found (hyprlock/swaylock)"
+            fi
             ;;
         *"Sleep") 
             confirm=$(echo -e "Yes\nNo" | rofi -dmenu -p "Sleep system?" -theme-str "$ROFI_THEME")
@@ -217,10 +223,14 @@ system_controls() {
             fi
             ;;
         *"Logout") 
-            confirm=$(echo -e "Yes\nNo" | rofi -dmenu -p "Logout from Hyprland?" -theme-str "$ROFI_THEME")
+            confirm=$(echo -e "Yes\nNo" | rofi -dmenu -p "Logout from session?" -theme-str "$ROFI_THEME")
             if [ "$confirm" = "Yes" ]; then
                 dunstify "System" "Logging out..." -i system-log-out
-                hyprctl dispatch exit
+                if command -v hyprctl &> /dev/null; then
+                    hyprctl dispatch exit
+                elif command -v pkill &> /dev/null; then
+                    pkill -KILL -u $USER
+                fi
             fi
             ;;
         *"Reboot") 
