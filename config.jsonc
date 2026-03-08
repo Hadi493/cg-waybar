@@ -26,7 +26,7 @@
 			"cpu", 
 			"memory", 
 			"temperature", 
-		    "custom/notification",
+		 // "custom/notification",
             "custom/wlogout"
 	],
 
