@@ -6,72 +6,37 @@
     "spacing": 0,
     "margin": 10,
     "modules-left": [
-			"custom/dwl-tags",
-			"custom/dwl-window",
-			"pulseaudio",
-			"pulseaudio#microphone", 
-			"idle_inhibitor"
-	],
+        "hyprland/workspaces",
+        "hyprland/window"
+    ],
     "modules-center": [
-			"custom/uptime", 
-			"clock",
-			"custom/updates",
-			"custom/updates-yay",
-		    //"network",
-			"tray"
-	],
+        "network",
+        "clock",
+        "idle_inhibitor"
+    ],
     "modules-right": [
-			"battery", 
-			"backlight", 
-			"cpu", 
-			"memory", 
-			"temperature", 
-		 // "custom/notification",
-            "custom/wlogout"
-	],
+        "tray",
+        "pulseaudio",
+        "pulseaudio#microphone",
+        "cpu",
+        "memory",
+        "temperature",
+        "battery",
+        "backlight",
+        "custom/wlogout"
+    ],
 
-
-    "custom/dwl-tags": {
-        "format": "{}",
-        "return-type": "json",
-        "exec": "~/.config/waybar/scripts/dwl_tags.sh",
-        "interval": 1
-    },
-
-    "custom/dwl-window": {
-        "format": "{}",
-        "return-type": "json",
-        "exec": "echo '{\"text\": \"dwl\"}'",
-        "interval": 5
-    },
-
-    "custom/dwl-status": {
-        "format": "󰖟 dwl ",
-        "tooltip": "DWL native modules require the IPC patch. Using placeholder.",
-        "on-click": "kitty -e man dwl"
-    },
-
-    "dwl/tags": {
+    "hyprland/workspaces": {
         "disable-scroll": true,
         "all-outputs": true,
-        "format": "{name}",
-        "format-icons": {
-            "1": "󰖟",
-            "2": "",
-            "3": "",
-            "4": "󰭹",
-            "5": "󰕧",
-            "6": "",
-            "7": "",
-            "8": "󰣇",
-            "9": "",
-            "10": ""
-        }
+        "active-only": false,
+        "on-click": "activate",
+        "format": "{name}"
     },
 
-    "dwl/window": {
-        "format": "{title}",
-        "max-length": 50
+    "hyprland/window": {
+        "format": "{}",
+        "separate-outputs": true
     },
 
     "custom/playerctl": {
