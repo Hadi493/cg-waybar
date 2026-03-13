@@ -128,7 +128,7 @@ window#waybar {
 /* Individual module styling */
 #mode, #mpd, #custom-weather, #custom-playerctl, #clock, #cpu,
 #memory, #temperature, #battery, #network, #pulseaudio,
-#backlight, #disk, #custom-uptime, #custom-updates, #custom-updates-yay, #custom-quote,
+#backlight, #disk, #custom-uptime, #custom-updates, #custom-quote,
 #custom-language, #idle_inhibitor, #tray, #window, #workspaces, #notification_center, #custom-notification, #custom-wlogout {
     padding: 0 10px;
     margin: 0px 2px;
@@ -141,7 +141,7 @@ window#waybar {
 
 #mode:hover, #mpd:hover, #custom-weather:hover, #custom-playerctl:hover, #clock:hover, #cpu:hover,
 #memory:hover, #temperature:hover, #battery:hover, #network:hover, #pulseaudio:hover,
-#backlight:hover, #disk:hover, #custom-uptime:hover, #custom-updates:hover, #custom-updates-yay:hover, #custom-quote:hover,
+#backlight:hover, #disk:hover, #custom-uptime:hover, #custom-updates:hover, #custom-quote:hover,
 #custom-language:hover, #idle_inhibitor:hover, #custom-notification:hover, #custom-wlogout:hover {
     background-color: @background-light;
     border-color: @blue;
@@ -172,7 +172,6 @@ window#waybar {
 #disk { color: @disk-color; }
 #custom-uptime { color: @uptime-color; }
 #custom-updates { color: @updates-color; }
-#custom-updates-yay { color: @updates-color; }
 #custom-quote { color: @quote-color; }
 #idle_inhibitor { color: @idle-inhibitor-color; }
 #idle_inhibitor.activated { color: @idle-inhibitor-active-color; }

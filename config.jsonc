@@ -23,6 +23,7 @@
         "temperature",
         "battery",
         "backlight",
+        "custom/updates",
         "custom/wlogout"
     ],
 
@@ -67,14 +68,8 @@
 
     "custom/updates": {
         "format": "󰚰 {}",
-        "exec": "checkupdates | wc -l",
-        "interval": 3600,
-        "on-click": "kitty -e sudo pacman -Syu",
-        "signal": 8
-    },
-    "custom/updates-yay": {
-        "format": "󰚰 {}",
-		"exec": "yay -Qua | wc -l",
+        "return-type": "json",
+        "exec": "~/.config/waybar/scripts/updates.sh",
         "interval": 3600,
         "on-click": "kitty -e yay -Syu",
         "signal": 8
