@@ -10,9 +10,9 @@
         "hyprland/window"
     ],
     "modules-center": [
-        "network",
-        "clock",
-        "idle_inhibitor"
+        //"network",
+        "clock"
+        //"idle_inhibitor"
     ],
     "modules-right": [
         "tray",
